@@ -1,27 +1,11 @@
-import TextPressure from "./components/TextPressure";
+import Content from "./components/my-component/Content";
+import Header_menu from "./components/my-component/Header_menu";
 
 function App() {
   return (
-    <div
-      style={{
-        position: "relative",
-        height: "100vh",
-        width: "100%",
-        backgroundColor: "black",
-      }}
-    >
-      <TextPressure
-        text="FRONTEND!"
-        flex={true}
-        alpha={false}
-        stroke={false}
-        width={true}
-        weight={true}
-        italic={true}
-        textColor="#ffffff"
-        strokeColor="#ff0000"
-        minFontSize={36}
-      />
+    <div className="w-full h-500 bg-[#0A0A0A]">
+      <Header_menu />
+      <Content />
     </div>
   );
 }

@@ -1,0 +1,17 @@
+Primary (main blue): #2563EB (blue mạnh, sáng rõ → làm màu chính cho nút, tiêu đề)
+
+Secondary (lighter blue): #3B82F6 (nhạt hơn → dùng cho hover hoặc accent nhẹ)
+
+Dark (deep blue): #1E3A8A (xanh đậm → dùng cho background hoặc nhấn mạnh)
+
+Accent (lightest blue): #BFDBFE (xanh rất nhạt → dùng cho background section, border, highlight nhẹ)
+
+👉 Với 4 màu này, bạn có thể phối theo kiểu UI design chuẩn:
+
+Background chính: trắng hoặc #F9FAFB (xám rất nhạt)
+
+Text chính: đen #111827 hoặc xám đậm #1F2937
+
+Các section highlight hoặc hover: dùng #3B82F6
+
+Các call-to-action (nút quan trọng): dùng #2563EB
