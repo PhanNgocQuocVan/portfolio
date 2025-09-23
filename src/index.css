@@ -1,5 +1,36 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@layer utilities {
+  /* WebKit (Chrome, Edge, Safari) */
+  ::-webkit-scrollbar {
+    @apply w-1.5 h-1.5; /* mảnh */
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent; /* track trong suốt */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-black/20 transition-colors duration-300;
+    backdrop-filter: blur(4px); /* hiệu ứng mờ */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-black/40;
+  }
+
+  /* Firefox */
+  html {
+    scrollbar-width: thin; /* mảnh */
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+}
+
+body {
+  font-family: "Figtree", "Open Sans", sans-serif;
+}
 
 @custom-variant dark (&:is(.dark *));
 
