@@ -5,7 +5,7 @@ function Header_menu() {
   return (
     <div className="w-full fixed flex justify-center z-100 top-2">
       <GlassSurface
-        width={620}
+        width={670}
         height={50}
         backgroundOpacity={0}
         saturation={0.7}
