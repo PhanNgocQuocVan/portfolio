@@ -6,10 +6,13 @@ import Header_menu from "./components/my-component/Header_menu";
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.5, // thời gian trễ khi cuộn
-      easing: (t) => 1 - Math.pow(1 - t, 3), // easing giống Apple
+      duration: 0.5,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
     });
+
+    // 👉 thêm dòng này
+    (window as any).lenis = lenis;
 
     function raf(time: number) {
       lenis.raf(time);
@@ -20,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full h-500 bg-[#0A0A0A]">
+    <div className="w-full bg-[#0A0A0A]">
       <Header_menu />
       <Content />
     </div>

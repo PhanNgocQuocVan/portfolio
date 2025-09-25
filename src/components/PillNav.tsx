@@ -319,31 +319,26 @@ const PillNav: React.FC<PillNavProps> = ({
 
               return (
                 <li key={item.href} role="none" className="flex h-full">
-                  {isRouterLink(item.href) ? (
-                    <Link
-                      role="menuitem"
-                      to={item.href}
-                      className={basePillClasses}
-                      style={pillStyle}
-                      aria-label={item.ariaLabel || item.label}
-                      onMouseEnter={() => handleEnter(i)}
-                      onMouseLeave={() => handleLeave(i)}
-                    >
-                      {PillContent}
-                    </Link>
-                  ) : (
-                    <a
-                      role="menuitem"
-                      href={item.href}
-                      className={basePillClasses}
-                      style={pillStyle}
-                      aria-label={item.ariaLabel || item.label}
-                      onMouseEnter={() => handleEnter(i)}
-                      onMouseLeave={() => handleLeave(i)}
-                    >
-                      {PillContent}
-                    </a>
-                  )}
+                  <a
+                    role="menuitem"
+                    href={item.href}
+                    className={basePillClasses}
+                    style={pillStyle}
+                    aria-label={item.ariaLabel || item.label}
+                    onMouseEnter={() => handleEnter(i)}
+                    onMouseLeave={() => handleLeave(i)}
+                    onClick={(e) => {
+                      if (item.href.startsWith("#")) {
+                        e.preventDefault();
+                        const target = document.querySelector(item.href);
+                        if (target) {
+                          (window as any).lenis.scrollTo(target); // 👉 dùng Lenis để scroll mượt
+                        }
+                      }
+                    }}
+                  >
+                    {PillContent}
+                  </a>
                 </li>
               );
             })}

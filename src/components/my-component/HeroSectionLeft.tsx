@@ -27,14 +27,14 @@ function HeroSectionLeft() {
       </div>
       <div className="flex flex-col">
         <DecryptedText
-          className="text-[#F1F5F9] text-lg sm:text-xl"
+          className="text-[#F1F5F9] text-lg sm:text-xl font-[500]"
           encryptedClassName="text-white"
           animateOn="view"
           sequential={true}
           text="I craft delightful digital experiences"
         />
         <DecryptedText
-          className="text-[#F1F5F9] text-lg sm:text-xl"
+          className="text-[#F1F5F9] text-lg sm:text-xl font-[500]"
           encryptedClassName="text-white"
           animateOn="view"
           sequential={true}
@@ -42,7 +42,7 @@ function HeroSectionLeft() {
         />
       </div>
       <div className="flex gap-4 mt-6">
-        <button className="bg-white text-black border border-gray-300 hover:bg-gray-100 shadow-sm cursor-pointer px-6 py-3 rounded-full  transition">
+        <button className="font-semibold bg-white text-black border border-gray-300 hover:bg-gray-100 shadow-sm cursor-pointer px-6 py-3 rounded-full  transition">
           View My Work
         </button>
         <button className="font-semibold cursor-pointer px-6 py-3 rounded-full bg-gradient-to-r from-[#2563EB] to-[#60A5FA] text-white shadow-lg hover:opacity-90">
