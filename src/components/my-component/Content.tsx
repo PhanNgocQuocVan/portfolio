@@ -6,6 +6,7 @@ import HeroSectionRight from "./HeroSectionRight";
 function Content() {
   return (
     <div>
+      {/* hinhNen */}
       <Aurora
         colorStops={["#2563EB", "#60A5FA", "#1E40AF"]}
         blend={1}

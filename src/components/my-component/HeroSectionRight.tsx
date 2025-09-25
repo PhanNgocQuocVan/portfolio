@@ -3,6 +3,21 @@ import C from "./iconProgram/C.dev";
 import Reactjs from "./iconProgram/Reactjs";
 import avatar from "@/assets/avatar.jpg";
 import avatarTachNen from "@/assets/xoaThanTachNen.png";
+import Typescrip from "./iconProgram/Typescrip";
+import Tailwincss from "./iconProgram/Tailwincss";
+import Nodejs from "./iconProgram/Nodejs";
+import ChatGpt from "./iconProgram/ChatGpt";
+import Html from "./iconProgram/Html";
+import Css from "./iconProgram/Css";
+import Js from "./iconProgram/Js";
+import Vscode from "./iconProgram/Vscode";
+import Reactrouter from "./iconProgram/React-router";
+import Ant from "./iconProgram/Ant";
+import Github from "./iconProgram/Github";
+import Sass from "./iconProgram/Sass";
+import Net from "./iconProgram/Net";
+import Postman from "./iconProgram/Postman";
+import Shadcn from "./iconProgram/Shadcn";
 
 function HeroSectionRight() {
   return (
@@ -17,28 +32,29 @@ function HeroSectionRight() {
           alt=""
         />
 
-        {/* 👇 OrbitingCircles đặt bên trong để cùng tâm */}
+        
         <OrbitingCircles radius={350} iconSize={95} className="text-white">
           <Reactjs />
-          <Reactjs />
-          <Reactjs />
-          <Reactjs />
-          <Reactjs />
-          <Reactjs />
-          <Reactjs />
-          <Reactjs />
-          <Reactjs />
+          <Typescrip />
+          <Tailwincss />
+          <Nodejs />
+          <ChatGpt />
+          <Html />
+          <Css />
+          <Js />
+          <Vscode />
+          
         </OrbitingCircles>
 
-        <OrbitingCircles radius={240} iconSize={60} reverse>
+        <OrbitingCircles radius={240} iconSize={50} reverse>
           <C />
-          <C />
-          <C />
-          <C />
-          <C />
-          <C />
-          <C />
-          <C />
+          <Reactrouter />
+          <Ant />
+          <Github />
+          <Sass />
+          <Net />
+          <Postman />
+          <Shadcn />
         </OrbitingCircles>
       </div>
     </div>

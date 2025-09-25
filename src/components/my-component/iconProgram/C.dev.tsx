@@ -13,7 +13,7 @@ function C() {
       "
     >
       <img
-        className="object-contain size-10"
+        className="object-contain size-[32px]"
         src={CLanguage}
         alt="react-icon"
       />

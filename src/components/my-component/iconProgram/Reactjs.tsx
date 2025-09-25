@@ -12,7 +12,7 @@ function Reactjs() {
         transition-all duration-300
       "
     >
-      <img className="object-contain size-20" src={react} alt="react-icon" />
+      <img className="object-contain" src={react} alt="react-icon" />
     </div>
   );
 }
