@@ -29,7 +29,6 @@ function Content() {
         interactive={false}
         className="text-6xl"
       />
-      {/* About */}
       <About />
       <TechStack />
     </div>

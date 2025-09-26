@@ -13,13 +13,13 @@ function About() {
       >
         About
       </ScrollFloat>
-      <div className=" lg:px-20 px-8 lg:mt-20 mt-8 ">
+      <div className=" lg:px-20 px-8 lg:mt-20 mt-8 z-2">
         <ScrollReveal
           baseOpacity={0}
           enableBlur={true}
           baseRotation={5}
           blurStrength={10}
-          textClassName="text-white"
+          textClassName="text-white "
         >
           👨‍💻 I’m a Frontend Developer passionate about building modern and
           user-friendly web apps. 🎓 Currently, I study at Dong Nai College of
