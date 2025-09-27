@@ -2,7 +2,7 @@ import CircularText from "../CircularText";
 
 function IconReactGlow() {
   return (
-    <div className="relative w-[200px] h-[200px] group">
+    <div className="relative w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] group">
       <CircularText
         text="REACT ✦ REACT ✦ REACT ✦ "
         onHover="speedUp"

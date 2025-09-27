@@ -1,9 +1,9 @@
-import typescrip from "@/assets/iconProgram/typescript.png"
+import typescrip from "@/assets/iconProgram/typescript.png";
 
 function Typescrip() {
   return (
     <div
-    className="
+      className="cursor-target
       bg-white/10 backdrop-blur-md 
       border border-cyan-400/30 
       p-2 rounded-full 
@@ -11,10 +11,10 @@ function Typescrip() {
       hover:scale-110 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)]
       transition-all duration-300
     "
-  >
-    <img className="object-contain" src={typescrip} alt="react-icon" />
-  </div>
-  )
+    >
+      <img className="object-contain" src={typescrip} alt="react-icon" />
+    </div>
+  );
 }
 
-export default Typescrip
+export default Typescrip;

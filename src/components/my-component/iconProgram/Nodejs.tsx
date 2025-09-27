@@ -1,9 +1,9 @@
-import nodejs from "@/assets/iconProgram/Node.js.png"
+import nodejs from "@/assets/iconProgram/Node.js.png";
 
 function Nodejs() {
   return (
     <div
-    className="
+      className="cursor-target
       bg-white/10 backdrop-blur-md 
       border border-[#83cd28]/30 
       p-2 rounded-full 
@@ -11,10 +11,14 @@ function Nodejs() {
       hover:scale-110 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)]
       transition-all duration-300
     "
-  >
-    <img className="object-contain size-[50px]" src={nodejs} alt="react-icon" />
-  </div>
-  )
+    >
+      <img
+        className="object-contain size-[50px]"
+        src={nodejs}
+        alt="react-icon"
+      />
+    </div>
+  );
 }
 
-export default Nodejs
+export default Nodejs;

@@ -1,9 +1,9 @@
-import sass from "@/assets/iconProgram/icons8-sass-50.png"
+import sass from "@/assets/iconProgram/icons8-sass-50.png";
 
 function Sass() {
   return (
     <div
-    className="
+      className="cursor-target
       bg-white/10 backdrop-blur-md 
       border border-[#148fff]/30 
       p-2 rounded-full 
@@ -11,10 +11,10 @@ function Sass() {
       hover:scale-110 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)]
       transition-all duration-300
     "
-  >
-    <img className="object-contain size-[32px]" src={sass} alt="react-icon" />
-  </div>
-  )
+    >
+      <img className="object-contain size-[32px]" src={sass} alt="react-icon" />
+    </div>
+  );
 }
 
-export default Sass
+export default Sass;

@@ -1,10 +1,9 @@
-import vs from "@/assets/iconProgram/icons8-visual-studio-code-2019-50.png"
-
+import vs from "@/assets/iconProgram/icons8-visual-studio-code-2019-50.png";
 
 function Vscode() {
   return (
     <div
-    className="
+      className="cursor-target
       bg-white/10 backdrop-blur-md 
       border border-[#29b6f6]/30 
       p-2 rounded-full 
@@ -12,10 +11,10 @@ function Vscode() {
       hover:scale-110 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)]
       transition-all duration-300
     "
-  >
-    <img className="object-contain size-[50px]" src={vs} alt="react-icon" />
-  </div>
-  )
+    >
+      <img className="object-contain size-[50px]" src={vs} alt="react-icon" />
+    </div>
+  );
 }
 
-export default Vscode
+export default Vscode;

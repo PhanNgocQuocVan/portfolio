@@ -3,7 +3,7 @@ import CLanguage from "@/assets/iconProgram/C.png";
 function C() {
   return (
     <div
-      className="
+      className="cursor-target
         bg-white/10 backdrop-blur-md 
         border border-cyan-400/30 
         p-2 rounded-full 
