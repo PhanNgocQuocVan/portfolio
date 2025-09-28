@@ -13,7 +13,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   hideDefaultCursor = true,
 }) => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
-  const cornersRef = useRef<NodeListOf<HTMLDivElement | null>>(null);
+  const cornersRef = useRef<NodeListOf<HTMLDivElement> | null>(null);
   const spinTl = useRef<gsap.core.Timeline>(null);
   const dotRef = useRef<HTMLDivElement | null>(null);
   const constants = useMemo(
@@ -44,7 +44,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     }
 
     const cursor = cursorRef.current;
-    cornersRef.current = cursor.querySelectorAll<HTMLDivElement | null>(
+    cornersRef.current = cursor.querySelectorAll<HTMLDivElement>(
       ".target-cursor-corner"
     );
 
@@ -76,13 +76,11 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
       if (spinTl.current) {
         spinTl.current.kill();
       }
-      spinTl.current = gsap
-        .timeline({ repeat: -1 })
-        .to(cursor, {
-          rotation: "+=360",
-          duration: spinDuration,
-          ease: "none",
-        });
+      spinTl.current = gsap.timeline({ repeat: -1 }).to(cursor, {
+        rotation: "+=360",
+        duration: spinDuration,
+        ease: "none",
+      });
     };
 
     createSpinTimeline();
@@ -333,13 +331,11 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
 
     if (spinTl.current.isActive()) {
       spinTl.current.kill();
-      spinTl.current = gsap
-        .timeline({ repeat: -1 })
-        .to(cursorRef.current, {
-          rotation: "+=360",
-          duration: spinDuration,
-          ease: "none",
-        });
+      spinTl.current = gsap.timeline({ repeat: -1 }).to(cursorRef.current, {
+        rotation: "+=360",
+        duration: spinDuration,
+        ease: "none",
+      });
     }
   }, [spinDuration]);
 

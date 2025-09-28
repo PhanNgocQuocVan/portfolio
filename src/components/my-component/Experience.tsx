@@ -1,26 +1,24 @@
 import ScrollFloat from "../ScrollFloat";
-import { Timeline } from "../ui/timeline";
-import Reactjs from "./iconProgram/Reactjs";
 
 function Experience() {
-  const data = [
-    {
-      title: "vanvuive",
-      content: <Reactjs />,
-    },
-    {
-      title: "vanvuive",
-      content: <Reactjs />,
-    },
-    {
-      title: "vanvuive",
-      content: <Reactjs />,
-    },
-    {
-      title: "vanvuive",
-      content: <Reactjs />,
-    },
-  ];
+  // const data = [
+  //   {
+  //     title: "vanvuive",
+  //     content: <Reactjs />,
+  //   },
+  //   {
+  //     title: "vanvuive",
+  //     content: <Reactjs />,
+  //   },
+  //   {
+  //     title: "vanvuive",
+  //     content: <Reactjs />,
+  //   },
+  //   {
+  //     title: "vanvuive",
+  //     content: <Reactjs />,
+  //   },
+  // ];
   return (
     <div
       id="Experience"

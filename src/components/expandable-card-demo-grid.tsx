@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import PinterestPj from "@/assets/project/ProjectPinterset.png";
@@ -144,7 +144,7 @@ export default function ExpandableCardDemo() {
         ) : null}
       </AnimatePresence>
       <ul className="mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start justify-center gap-5 lg:px-30 px-8">
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
