@@ -180,7 +180,10 @@ export default function Aurora(props: AuroraProps) {
     ctn.appendChild(gl.canvas);
 
     let animateId = 0;
+    let isVisible = false;
+
     const update = (t: number) => {
+      if (!isVisible) return; // chỉ render khi thấy trên màn hình
       animateId = requestAnimationFrame(update);
       const { time = t * 0.01, speed = 1.0 } = propsRef.current;
       if (program) {
@@ -195,13 +198,31 @@ export default function Aurora(props: AuroraProps) {
         renderer.render({ scene: mesh });
       }
     };
-    animateId = requestAnimationFrame(update);
+
+    // 👁️ IntersectionObserver theo dõi khi div còn trong viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            isVisible = true;
+            animateId = requestAnimationFrame(update); // resume
+          } else {
+            isVisible = false;
+            cancelAnimationFrame(animateId); // pause
+          }
+        });
+      },
+      { threshold: 0.1 } // chỉ cần 10% vào viewport là chạy
+    );
+
+    observer.observe(ctn);
 
     resize();
 
     return () => {
       cancelAnimationFrame(animateId);
       window.removeEventListener("resize", resize);
+      observer.disconnect();
       if (ctn && gl.canvas.parentNode === ctn) {
         ctn.removeChild(gl.canvas);
       }

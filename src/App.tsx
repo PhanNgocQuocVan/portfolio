@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-full bg-[#0A0A0A]">
+    <div className="w-full bg-[#0A0A0A] overflow-hidden">
       <Header_menu />
       <Content />
     </div>

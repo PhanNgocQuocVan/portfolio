@@ -1,6 +1,8 @@
 import Aurora from "../Aurora";
 import CurvedLoop from "../CurvedLoop";
+import ScrollVelocity from "../ScrollVelocity";
 import About from "./About";
+import Contact from "./Contact";
 import Experience from "./Experience";
 
 import HeroSectionLeft from "./HeroSectionLeft";
@@ -10,7 +12,7 @@ import TechStack from "./TechStack";
 
 function Content() {
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* hinhNen */}
       <Aurora
         colorStops={["#2563EB", "#60A5FA", "#1E40AF"]}
@@ -35,6 +37,12 @@ function Content() {
       <TechStack />
       <Projects />
       <Experience />
+      <ScrollVelocity
+        texts={["Contact Me", "Frontend React"]}
+        velocity={100}
+        className="text-white"
+      />
+      <Contact />
     </div>
   );
 }
