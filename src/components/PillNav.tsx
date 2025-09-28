@@ -42,8 +42,8 @@ const PillNav: React.FC<PillNavProps> = ({
   const tlRefs = useRef<Array<gsap.core.Timeline | null>>([]);
   const activeTweenRefs = useRef<Array<gsap.core.Tween | null>>([]);
   const hamburgerRef = useRef<HTMLButtonElement | null>(null);
-  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
-  const navItemsRef = useRef<HTMLDivElement | null>(null);
+  const mobileMenuRef = useRef<HTMLDivElement | null | null>(null);
+  const navItemsRef = useRef<HTMLDivElement | null | null>(null);
   const logoRef = useRef<HTMLAnchorElement | HTMLElement | null>(null);
 
   useEffect(() => {

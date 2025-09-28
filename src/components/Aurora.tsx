@@ -124,7 +124,7 @@ export default function Aurora(props: AuroraProps) {
   const propsRef = useRef<AuroraProps>(props);
   propsRef.current = props;
 
-  const ctnDom = useRef<HTMLDivElement>(null);
+  const ctnDom = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const ctn = ctnDom.current;
