@@ -20,7 +20,7 @@ function TechStack() {
         Tech Stack
       </ScrollFloat>
 
-      <div className="w-full flex lg:flex-row  flex-col items-center lg:items-start justify-between px-20 mt-20 z-1 gap-20">
+      <div className="w-full flex lg:flex-row  flex-col items-center lg:items-start justify-between px-8 lg:px-20 mt-20 z-1 gap-20">
         <TargetCursor spinDuration={2} hideDefaultCursor={false} />
 
         <div className="lg:w-1/3 w-full flex flex-col gap-5 items-center justify-center ">

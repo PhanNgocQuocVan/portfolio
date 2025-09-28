@@ -1,9 +1,11 @@
 import Aurora from "../Aurora";
 import CurvedLoop from "../CurvedLoop";
 import About from "./About";
+import Experience from "./Experience";
 
 import HeroSectionLeft from "./HeroSectionLeft";
 import HeroSectionRight from "./HeroSectionRight";
+import Projects from "./Projects";
 import TechStack from "./TechStack";
 
 function Content() {
@@ -31,6 +33,8 @@ function Content() {
       />
       <About />
       <TechStack />
+      <Projects />
+      <Experience />
     </div>
   );
 }

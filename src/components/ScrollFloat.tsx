@@ -86,10 +86,7 @@ const ScrollFloat: React.FC<ScrollFloatProps> = ({
   ]);
 
   return (
-    <h2
-      ref={containerRef}
-      className={`my-5 overflow-hidden ${containerClassName}`}
-    >
+    <h2 ref={containerRef} className={`my-5 ${containerClassName}`}>
       <span
         className={`inline-block text-[clamp(1.6rem,4.5vw,8rem)] leading-[1.5] ${textClassName}`}
       >
