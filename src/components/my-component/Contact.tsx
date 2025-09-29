@@ -9,7 +9,7 @@ function Contact() {
     <div
       id="Contact"
       style={{
-        height: "800px",
+        height: "1300px",
         position: "relative",
         overflow: "hidden",
         backgroundColor: "#060010",
@@ -21,7 +21,7 @@ function Contact() {
         const el = revealImgRef.current;
         if (el) {
           el.style.setProperty("--mx", `${x}px`);
-          el.style.setProperty("--my", `${y + rect.height * 0.5}px`);
+          el.style.setProperty("--my", `${y + rect.height * 0.1}px`);
         }
       }}
       onMouseLeave={() => {
@@ -34,14 +34,14 @@ function Contact() {
     >
       <LaserFlow
         horizontalBeamOffset={-0.2}
-        verticalBeamOffset={0.0}
+        verticalBeamOffset={0.1}
         color="#3B82F6"
       />
 
       <div
         style={{
           position: "absolute",
-          top: "50%",
+          top: "40%",
           left: "50%",
           transform: "translateX(-50%)",
           width: "86%",
@@ -61,14 +61,16 @@ function Contact() {
       </div>
 
       <img
+        className="hidden md:block"
         ref={revealImgRef}
         src={avatar}
         alt="Reveal effect"
         style={
           {
             position: "absolute",
-            height: "75%",
-            top: "-10%",
+            height: "50%",
+            objectFit: "cover",
+            top: "-2%",
             zIndex: 5,
             mixBlendMode: "lighten",
             opacity: 0.3,
