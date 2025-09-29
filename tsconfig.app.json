@@ -12,12 +12,14 @@
       "@/*": ["./src/*"]
     },
 
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
-    "jsx": "react-jsx",
 
     "strict": true,
     "noUnusedLocals": true,
@@ -26,5 +28,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "global.d.ts"]
 }
