@@ -2,7 +2,7 @@ import { useRef } from "react";
 import LaserFlow from "../LaserFlow";
 
 function Contact() {
-  const revealImgRef = useRef(null);
+  const revealImgRef = useRef<HTMLImageElement | null>(null);
 
   return (
     <>
@@ -58,7 +58,7 @@ function Contact() {
           }}
         ></div>
 
-        {/* <img
+        <img
           ref={revealImgRef}
           src="/path/to/image.jpg"
           alt="Reveal effect"
@@ -79,7 +79,7 @@ function Contact() {
             WebkitMaskRepeat: "no-repeat",
             maskRepeat: "no-repeat",
           }}
-        /> */}
+        />
       </div>
     </>
   );
