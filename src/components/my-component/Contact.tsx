@@ -3,7 +3,59 @@ import LaserFlow from "../LaserFlow";
 import avatar from "@/assets/anh cho contact.jpeg";
 import { Button } from "../ui/stateful-button";
 import emailjs from "@emailjs/browser";
-import Lanyard from "../Lanyard";
+import {
+  TextRevealCard,
+  TextRevealCardDescription,
+  TextRevealCardTitle,
+} from "../ui/text-reveal-card";
+import { AnimatedTooltip } from "../ui/animated-tooltip";
+
+const people = [
+  {
+    id: 1,
+    name: "facebook",
+    designation: "văn vui vẻ",
+    link: "https://www.facebook.com/van.vui.ve.995608/",
+    image:
+      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+  },
+  {
+    id: 2,
+    name: "Zalo",
+    designation: "Văn Phan",
+    link: "https://zalo.me/0372594819",
+    image:
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    id: 3,
+    name: "Jane Smith",
+    designation: "Data Scientist",
+    image:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    id: 4,
+    name: "Emily Davis",
+    designation: "UX Designer",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    id: 5,
+    name: "Tyler Durden",
+    designation: "Soap Developer",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+  },
+  {
+    id: 6,
+    name: "Dora",
+    designation: "The Explorer",
+    image:
+      "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+  },
+];
 
 function Contact() {
   const revealImgRef = useRef<HTMLImageElement | null>(null);
@@ -96,7 +148,7 @@ function Contact() {
           padding: "2%",
         }}
       >
-        <div className="w-full flex md:flex-row flex-col h-full">
+        <div className="w-full flex md:flex-row flex-col h-full gap-10">
           <form
             ref={form}
             className="w-[40%] p-10 border-1  border-[#3B82F6] h-full rounded-[26px] flex flex-col items-center gap-4"
@@ -150,8 +202,23 @@ function Contact() {
             </div>
           </form>
 
-          <div className="flex flex-1">
-            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+          <div className="flex flex-col items-center h-full justify-between flex-1">
+            <TextRevealCard
+              text="Work With Me"
+              revealText="Create Something New"
+            >
+              <TextRevealCardTitle>Let’s Work Together</TextRevealCardTitle>
+              <TextRevealCardDescription>
+                I’m always open to new projects, ideas, or collaborations. Drop
+                me a message and let’s make it happen.
+              </TextRevealCardDescription>
+            </TextRevealCard>
+            <div className="flex flex-col h-[30%] items-start w-full justify-center gap-10">
+              <h1 className="text-5xl font-bold">social media</h1>
+              <div className="flex flex-row items-center w-full">
+                <AnimatedTooltip items={people} />
+              </div>
+            </div>
           </div>
         </div>
       </div>
