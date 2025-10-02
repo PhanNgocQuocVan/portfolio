@@ -93,7 +93,7 @@ export default function BubbleMenu({
     "md:hidden",
     "bubble-menu",
     useFixedPosition ? "fixed" : "absolute",
-    "left-0 right-0 top-2",
+    "left-0 right-0 top-3",
     "flex items-center justify-between",
     "gap-4 px-4",
     "pointer-events-none",
