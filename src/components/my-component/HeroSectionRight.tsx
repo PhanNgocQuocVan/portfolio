@@ -21,18 +21,21 @@ import Shadcn from "./iconProgram/Shadcn";
 
 function HeroSectionRight() {
   return (
-    <div className="w-1/2 flex items-center justify-center relative h-[900px]">
-      <div className="flex  items-center justify-center w-91 h-91 rounded-full bg-[#BFDBFE] shadow-[0_0_20px_0_#BFDBFE]">
-        <div className=" w-89 h-89 rounded-full overflow-hidden flex items-end justify-center">
-          <img className=" size-110 object-cover" src={avatar} alt="" />
+    <div className="md:w-1/2 w-full flex items-center justify-center relative h-[900px]">
+      <div className="flex items-center justify-center md:w-91 md:h-91 w-60 h-60 rounded-full bg-[#BFDBFE] shadow-[0_0_20px_0_#BFDBFE]">
+        <div className=" md:w-89 md:h-89 w-58 h-58 rounded-full overflow-hidden flex items-end justify-center">
+          <img
+            className=" md:size-110 size-80 object-cover"
+            src={avatar}
+            alt=""
+          />
         </div>
         <img
-          className="size-110 object-cover absolute top-47 z-1"
+          className="md:size-110 size-80 object-cover absolute md:top-47 top-62 z-1"
           src={avatarTachNen}
           alt=""
         />
 
-        
         <OrbitingCircles radius={350} iconSize={95} className="text-white">
           <Reactjs />
           <Typescrip />
@@ -43,7 +46,6 @@ function HeroSectionRight() {
           <Css />
           <Js />
           <Vscode />
-          
         </OrbitingCircles>
 
         <OrbitingCircles radius={240} iconSize={50} reverse>

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import LaserFlow from "../LaserFlow";
 import avatar from "@/assets/anh cho contact.jpeg";
 import { Button } from "../ui/stateful-button";
@@ -9,51 +9,56 @@ import {
   TextRevealCardTitle,
 } from "../ui/text-reveal-card";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
+import fb from "@/assets/social icon/facebook.png";
+import zl from "@/assets/social icon/zalo.png";
+import gh from "@/assets/social icon/github.png";
+import ig from "@/assets/social icon/instagram.png";
+import lk from "@/assets/social icon/linkedin.png";
+import tt from "@/assets/social icon/tiktok.png";
 
 const people = [
   {
     id: 1,
-    name: "facebook",
-    designation: "văn vui vẻ",
-    link: "https://www.facebook.com/van.vui.ve.995608/",
-    image:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+    name: "gitHub",
+    designation: "PhanNgocQuocVan",
+    link: "https://github.com/PhanNgocQuocVan",
+    image: gh,
   },
   {
     id: 2,
-    name: "Zalo",
-    designation: "Văn Phan",
-    link: "https://zalo.me/0372594819",
-    image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    name: "facebook",
+    designation: "văn vui vẻ",
+    link: "https://www.facebook.com/van.vui.ve.995608/",
+    image: fb,
   },
+
   {
     id: 3,
-    name: "Jane Smith",
-    designation: "Data Scientist",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    name: "instagram",
+    designation: "văn vui vẻ",
+    link: "https://www.instagram.com/van_vui_ve84?igsh=MTR2M21xeXNjdDRsbQ%3D%3D&utm_source=qr",
+    image: ig,
   },
   {
     id: 4,
-    name: "Emily Davis",
-    designation: "UX Designer",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    name: "linkedin",
+    designation: "phan ngọc quốc văn",
+    link: "https://www.linkedin.com/in/phan-ng%E1%BB%8Dc-qu%E1%BB%91c-v%C4%83n-280940301/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: lk,
   },
   {
     id: 5,
-    name: "Tyler Durden",
-    designation: "Soap Developer",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+    name: "tiktok",
+    designation: "văn vui vẻ",
+    link: "https://www.tiktok.com/@vvv_van_vvv?_t=ZS-90CWTykO8w9&_r=1",
+    image: tt,
   },
   {
     id: 6,
-    name: "Dora",
-    designation: "The Explorer",
-    image:
-      "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+    name: "Zalo",
+    designation: "Văn Phan",
+    link: "https://zalo.me/0372594819",
+    image: zl,
   },
 ];
 
@@ -62,6 +67,20 @@ function Contact() {
   const form = useRef<HTMLFormElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const [error, setError] = useState<string>("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup khi component bị unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handlesubmit = async (e: React.FormEvent) => {
     if (!emailRef.current) return;
@@ -99,7 +118,7 @@ function Contact() {
     <div
       id="Contact"
       style={{
-        height: "1300px",
+        height: isMobile ? "900px" : "1300px",
         position: "relative",
         overflow: "hidden",
         backgroundColor: "#060010",
@@ -148,33 +167,33 @@ function Contact() {
           padding: "2%",
         }}
       >
-        <div className="w-full flex md:flex-row flex-col h-full gap-10">
+        <div className="w-full flex lg:flex-row flex-col h-full gap-10">
           <form
             ref={form}
-            className="w-[40%] p-10 border-1  border-[#3B82F6] h-full rounded-[26px] flex flex-col items-center gap-4"
+            className="lg:w-[40%] w-full p-10 border-1  border-[#3B82F6] h-full rounded-[26px] flex flex-col items-center gap-4"
           >
-            <h2 className="text-5xl font-bold mb-5">Contact Me</h2>
+            <h2 className="md:text-5xl text-2xl font-bold mb-5">Contact Me</h2>
             <div className="flex flex-col items-start gap-2 w-full">
-              <label className="text-2xl" htmlFor="name">
+              <label className="md:text-2xl text-sm" htmlFor="name">
                 Name
               </label>
               <input
                 name="name"
-                className="w-full text-xl h-15 focus:outline-hidden px-8 rounded-full border-2 border-[#3B82F6] border-dashed"
+                className="w-full md:text-xl text-sm md:h-15 h-10 focus:outline-hidden md:px-8 px-5 rounded-full border-2 border-[#3B82F6] border-dashed"
                 type="text"
                 id="name"
                 placeholder="Your name"
               />
             </div>
             <div className="flex flex-col items-start gap-2 w-full">
-              <label className="text-2xl" htmlFor="email">
+              <label className="md:text-2xl text-sm" htmlFor="email">
                 Email
               </label>
               <input
                 onChange={() => setError("")}
                 ref={emailRef}
                 name="email"
-                className="w-full text-xl h-15 focus:outline-hidden px-8 rounded-full border-2 border-[#3B82F6] border-dashed"
+                className="w-full md:text-xl text-sm md:h-15 h-10 focus:outline-hidden md:px-8 px-5 rounded-full border-2 border-[#3B82F6] border-dashed"
                 type="text"
                 id="email"
                 placeholder="you@example.com"
@@ -187,10 +206,12 @@ function Contact() {
               )}
             </div>
             <div className="flex flex-col items-start gap-2 w-full">
-              <label htmlFor="Message">Message</label>
+              <label className="md:text-2xl text-sm" htmlFor="Message">
+                Message
+              </label>
               <textarea
                 name="message"
-                className="resize-none w-full text-xl h-48 focus:outline-hidden p-8 rounded-4xl border-2 border-[#3B82F6] border-dashed"
+                className="resize-none w-full md:text-xl text-sm md:h-48 h-20 focus:outline-hidden md:p-8 p-2 md:rounded-4xl rounded-xl border-2 border-[#3B82F6] border-dashed"
                 id="Message"
                 placeholder="Write your message here..."
               />
@@ -202,7 +223,7 @@ function Contact() {
             </div>
           </form>
 
-          <div className="flex flex-col items-center h-full justify-between flex-1">
+          <div className="lg:flex hidden flex-col items-center h-full justify-between flex-1">
             <TextRevealCard
               text="Work With Me"
               revealText="Create Something New"
@@ -213,8 +234,8 @@ function Contact() {
                 me a message and let’s make it happen.
               </TextRevealCardDescription>
             </TextRevealCard>
-            <div className="flex flex-col h-[30%] items-start w-full justify-center gap-10">
-              <h1 className="text-5xl font-bold">social media</h1>
+            <div className="flex flex-col h-[30%] items-start w-full justify-center gap-5">
+              <h1 className="text-4xl font-bold">social media</h1>
               <div className="flex flex-row items-center w-full">
                 <AnimatedTooltip items={people} />
               </div>

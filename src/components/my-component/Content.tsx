@@ -4,6 +4,7 @@ import ScrollVelocity from "../ScrollVelocity";
 import About from "./About";
 import Contact from "./Contact";
 import Experience from "./Experience";
+import Footed from "./Footed";
 
 import HeroSectionLeft from "./HeroSectionLeft";
 import HeroSectionRight from "./HeroSectionRight";
@@ -21,7 +22,7 @@ function Content() {
         speed={0.5}
       />
       {/* hero section */}
-      <div className="-mt-[70vh] flex items-center px-15 ">
+      <div className="-mt-[70vh] flex md:flex-row flex-col items-center px-15 ">
         <HeroSectionLeft />
         <HeroSectionRight />
       </div>
@@ -43,6 +44,7 @@ function Content() {
         className="text-white"
       />
       <Contact />
+      <Footed />
     </div>
   );
 }

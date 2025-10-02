@@ -85,16 +85,16 @@ export const Button = ({ className, children, ...props }: ButtonProps) => {
       layoutId="button"
       ref={scope}
       className={cn(
-        "flex min-w-[120px] cursor-pointer items-center justify-center gap-2 rounded-full bg-[#2563EB] px-4 py-2 font-medium text-white ring-offset-2 transition duration-200 hover:ring-2 hover:ring-[#2563EB] dark:ring-offset-black",
+        "flex min-w-[120px] cursor-pointer items-center justify-center gap-2 rounded-full bg-[#2563EB] px-4 py-2 font-medium text-white  ring-offset-2 transition duration-200 hover:ring-2 hover:ring-[#2563EB] dark:ring-offset-black",
         className
       )}
       {...buttonProps}
       onClick={handleClick}
     >
-      <motion.div layout className="flex items-center gap-2">
+      <motion.div layout className="flex items-center gap-2 ">
         <Loader />
         <CheckIcon />
-        <motion.span layout className="text-lg">
+        <motion.span layout className="md:text-xl text-sm">
           {children}
         </motion.span>
       </motion.div>

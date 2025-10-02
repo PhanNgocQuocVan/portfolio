@@ -9,7 +9,7 @@ function Time2024() {
         <h1 className="text-[#3B82F6] shadow-[#2563EB] lg:text-4xl text-2xl mb-3 font-bold">
           Growing with Projects
         </h1>
-        <p>
+        <p className="text-xl md:text-2xl">
           I completed an HTML & CSS and Javascript certificate at F8, then
           advanced my skills by building professional personal{" "}
           <LinkPreview

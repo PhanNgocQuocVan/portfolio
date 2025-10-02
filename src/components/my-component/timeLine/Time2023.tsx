@@ -8,7 +8,7 @@ function Time2023() {
         <h1 className="text-[#3B82F6] shadow-[#2563EB] lg:text-4xl text-2xl mb-3 font-bold">
           Foundation Year
         </h1>
-        <p>
+        <p className="text-xl md:text-2xl">
           In my first year, I focused on strengthening my fundamental
           programming skills by completing the Basic Programming course on F8
           and earning a certificate.
