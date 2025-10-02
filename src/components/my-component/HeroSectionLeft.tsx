@@ -5,7 +5,7 @@ function HeroSectionLeft() {
   return (
     <div className="md:w-1/2 w-full flex flex-col md:gap-5 gap-2">
       <p className="text-[#3B82F6] font-bold text-3xl">Hi, I'm Văn 👋</p>
-      <div className="flex flex-col md:flex-row gap-2 text-5xl font-bold md:items-center items-start justify-start">
+      <div className="flex flex-row gap-2 text-5xl font-bold md:items-center items-start justify-start">
         <p className="text-white md:text-5xl text-2xl">Focus:</p>
         <RotatingText
           texts={[

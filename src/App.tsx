@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import Content from "./components/my-component/Content";
 import Header_menu from "./components/my-component/Header_menu";
+import BubbleMenu from "./components/BubbleMenu";
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,15 @@ function App() {
 
   return (
     <div className="w-full bg-[#0A0A0A] overflow-hidden">
+      <BubbleMenu
+        menuAriaLabel="Toggle navigation"
+        menuBg="#ffffff"
+        menuContentColor="#111111"
+        useFixedPosition={true}
+        animationEase="back.out(1.5)"
+        animationDuration={0.5}
+        staggerDelay={0.12}
+      />
       <Header_menu />
       <Content />
     </div>

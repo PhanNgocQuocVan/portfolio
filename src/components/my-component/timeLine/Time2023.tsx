@@ -13,7 +13,7 @@ function Time2023() {
           programming skills by completing the Basic Programming course on F8
           and earning a certificate.
         </p>
-        <p className="hidden md:block">
+        <div className="hidden md:block">
           To reinforce my knowledge, I also built several personal{" "}
           <LinkPreview
             url="https://phanngocquocvan.github.io/start/"
@@ -22,7 +22,7 @@ function Time2023() {
             projects
           </LinkPreview>{" "}
           to practice and apply what I had learned.
-        </p>
+        </div>
       </div>
       <img
         className="w-full object-contain rounded-[32px]"

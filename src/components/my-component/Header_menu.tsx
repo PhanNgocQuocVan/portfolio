@@ -3,7 +3,7 @@ import PillNav from "../PillNav";
 
 function Header_menu() {
   return (
-    <div className="w-full fixed flex justify-center z-100 top-2">
+    <div className="w-full hidden  fixed md:flex justify-center z-100 top-2">
       <GlassSurface
         width={670}
         height={50}

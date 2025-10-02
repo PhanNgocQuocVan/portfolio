@@ -22,7 +22,7 @@ function Content() {
         speed={0.5}
       />
       {/* hero section */}
-      <div className="-mt-[70vh] flex md:flex-row flex-col items-center px-15 ">
+      <div className="-mt-[70vh] flex md:flex-row flex-col items-center md:px-15 px-5">
         <HeroSectionLeft />
         <HeroSectionRight />
       </div>

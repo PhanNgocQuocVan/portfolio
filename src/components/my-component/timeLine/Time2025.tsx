@@ -8,7 +8,7 @@ function Time2025() {
         <h1 className="text-[#3B82F6] shadow-[#2563EB] lg:text-4xl text-2xl mb-3 font-bold">
           Final Year & Career Preparation
         </h1>
-        <p className="text-xl md:text-2xl">
+        <div className="text-xl md:text-2xl">
           “I completed a Basic ReactJS course on Udemy and earned the
           certificate, strengthening my skills through large-scale personal{" "}
           <LinkPreview
@@ -18,7 +18,7 @@ function Time2025() {
             projects
           </LinkPreview>{" "}
           . I was also honored to receive a scholarship from my university.
-        </p>
+        </div>
       </div>
 
       <img

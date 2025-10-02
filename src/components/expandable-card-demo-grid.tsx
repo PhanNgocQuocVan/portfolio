@@ -73,7 +73,7 @@ export default function ExpandableCardDemo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-[80%] md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-auto"
+              className="md:w-[80%] w-[90%] md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 rounded-2xl sm:rounded-3xl overflow-auto"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -84,8 +84,8 @@ export default function ExpandableCardDemo() {
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4 lg:px-20 px-8 mt-5">
-                  <div className="flex flex-col gap-1">
+                <div className="flex justify-between items-start p-4 lg:px-20 px-6 mt-5">
+                  <div className="flex flex-col gap-1 w-[58%]">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
                       className="text-[#111827] dark:text-neutral-400 text-sm font-bold"
@@ -108,7 +108,7 @@ export default function ExpandableCardDemo() {
                       exit={{ opacity: 0 }}
                       href={active.ctaLink}
                       target="_blank"
-                      className="px-10 py-3 text-md rounded-full font-bold bg-black text-white "
+                      className="md:px-10 px-5 md:py-3 py-2 md:text-md text-sm rounded-full font-bold bg-black text-white "
                     >
                       {active.ctaText}
                     </motion.a>
@@ -125,7 +125,7 @@ export default function ExpandableCardDemo() {
                     </motion.a>
                   </div>
                 </div>
-                <div className="pt-4 relative lg:px-20 p-8">
+                <div className="pt-4 relative lg:px-20 p-6">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}

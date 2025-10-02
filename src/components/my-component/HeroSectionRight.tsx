@@ -18,8 +18,19 @@ import Sass from "./iconProgram/Sass";
 import Net from "./iconProgram/Net";
 import Postman from "./iconProgram/Postman";
 import Shadcn from "./iconProgram/Shadcn";
+import { useEffect, useState } from "react";
 
 function HeroSectionRight() {
+  const [inMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handelResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handelResize);
+    return () => {
+      window.removeEventListener("resize", handelResize);
+    };
+  }, []);
   return (
     <div className="md:w-1/2 w-full flex items-center justify-center relative h-[900px]">
       <div className="flex items-center justify-center md:w-91 md:h-91 w-60 h-60 rounded-full bg-[#BFDBFE] shadow-[0_0_20px_0_#BFDBFE]">
@@ -36,7 +47,11 @@ function HeroSectionRight() {
           alt=""
         />
 
-        <OrbitingCircles radius={350} iconSize={95} className="text-white">
+        <OrbitingCircles
+          radius={inMobile ? 280 : 350}
+          iconSize={95}
+          className="text-white"
+        >
           <Reactjs />
           <Typescrip />
           <Tailwincss />
@@ -48,7 +63,7 @@ function HeroSectionRight() {
           <Vscode />
         </OrbitingCircles>
 
-        <OrbitingCircles radius={240} iconSize={50} reverse>
+        <OrbitingCircles radius={inMobile ? 180 : 240} iconSize={50} reverse>
           <C />
           <Reactrouter />
           <Ant />
